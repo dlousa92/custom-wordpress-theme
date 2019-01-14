@@ -1,5 +1,7 @@
 <?php
 
+// Functions
+
 function bootstrapstarter_wp_setup() {
   add_theme_support('tutle-tag');
 }
@@ -29,6 +31,8 @@ function bootstrapstarter_widgets_init() {
     'after_title'   => '</h4>'
   ));
 }
+
+// Actions
 
 add_action( 'after_setup-theme', 'bootstrapstarter_wp_setup');
 add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_styles' );
