@@ -19,9 +19,21 @@ function bootstrapstarter_register_menu() {
   register_nav_menu('header-menu', __( 'Header Menu'));
 }
 
+function bootstrapstarter_widgets_init() {
+  register_sidebar( array(
+    'name' => 'Footer - Copyright Text',
+    'id'   => 'footer_copyright_text',
+    'before_widget' => 'div class="footer_copyright_text">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>'
+  ));
+}
+
 add_action( 'after_setup-theme', 'bootstrapstarter_wp_setup');
 add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_scripts' );
 add_action( 'init', 'bootstrapstarter_register_menu' );
+add_action( 'widgets_init', 'bootstrapstarter_widgets_init');
 
 ?>
