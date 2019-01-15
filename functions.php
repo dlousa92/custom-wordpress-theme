@@ -3,7 +3,8 @@
 // Functions
 
 function bootstrapstarter_wp_setup() {
-  add_theme_support('tutle-tag');
+  add_theme_support('title-tag');
+  add_theme_support('post-thumbnails');
 }
 
 function bootstrapstarter_enqueue_styles() {
