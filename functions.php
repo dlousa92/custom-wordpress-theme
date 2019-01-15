@@ -6,6 +6,7 @@ function bootstrapstarter_wp_setup() {
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
 }
+add_action( 'after_setup-theme', 'bootstrapstarter_wp_setup');
 
 function bootstrapstarter_enqueue_styles() {
   wp_register_style('bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
@@ -52,8 +53,6 @@ function bootstrapstarter_widgets_init() {
 }
 
 // Actions
-
-add_action( 'after_setup-theme', 'bootstrapstarter_wp_setup');
 add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_scripts' );
 add_action( 'init', 'bootstrapstarter_register_menu' );
