@@ -2,7 +2,6 @@
 $slides = array();
 $args = array( 'tag' => 'slide', 'nopaging'=> true, 'posts_per_page'=>5 );
 $slider_query = new WP_Query( $args );
-
 if ( $slider_query->have_posts() ) {
   while ( $slider_query->have_posts() ) {
     $slider_query->the_post();
@@ -22,11 +21,14 @@ if ( $slider_query->have_posts() ) {
 wp_reset_postdata();
 ?>
 
+<?php if(count($slides) > 0) { ?>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php for($i=0;$i<count($slides);$i++) { ?>
     <li data-target='#carousel-example-generic' data-slide-to='<?php echo $i ?>' <?php if($i==0) { ?> class='active' <?php } ?>></li>
+    <?php } ?>
   </ol>
 
   <!-- Wrapper for slides -->
