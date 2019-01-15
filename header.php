@@ -32,5 +32,6 @@
     <?php $description = get_bloginfo( 'description', 'display' ); ?>
     <?php if($description) { ?><p class='lead blog-description'><?php echo $description ?></p><?php } ?>
  </div>
+<?php get_template_part('parts/slider'); ?>
 
  <div class="row">
