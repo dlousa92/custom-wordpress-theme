@@ -34,7 +34,7 @@ wp_reset_postdata();
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <?php $i=0; foreach($slides as $slide) { extract($slide); ?>
-    <div class='item <?php if($i==0) { ?> active<?php } ?>'>
+    <div class='carousel-item <?php if($i==0) { ?> active<?php } ?>'>
       <img src='<?php echo $image ?>' alt='<?php echo esc_attr($title); ?>'>
       <div class="carousel-caption">
         <h3><?php echo $title; ?></h3>
@@ -45,12 +45,12 @@ wp_reset_postdata();
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
