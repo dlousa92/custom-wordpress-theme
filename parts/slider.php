@@ -34,7 +34,7 @@ wp_reset_postdata();
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <?php $i=0; foreach($slides as $slide) { extract($slide); ?>
-    <div class='carousel-item <?php if($i==0) { ?> active<?php } ?>'>
+    <div class='item <?php if($i==0) { ?> active<?php } ?>'>
       <img src='<?php echo $image ?>' alt='<?php echo esc_attr($title); ?>'>
       <div class="carousel-caption">
         <h3><?php echo $title; ?></h3>
